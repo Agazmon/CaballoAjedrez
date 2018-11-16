@@ -1,12 +1,19 @@
 package org.iesalandalus.programacion.caballoajedrez;
-import org.iesalandalus.programacion.utilidades.Entrada;
+
 public class Posicion {
 	private int fila;
 	private char columna;
-	
+	public Posicion(int fila, char columna) {
+		setFila(fila);
+		setColumna(columna);
+	}
+	public Posicion(Posicion posicion) {
+		this.fila=getFila();
+		this.columna=getColumna();
+	}
 	public void setFila(int fila) {
-		if (fila < 1 || fila > 8) {
-			throw new IllegalArgumentException("La fila introducida no es v·lida, porfavor utilice otra entre 1 y 8.");
+		if (fila < 1 | fila > 8 ) {
+			throw new IllegalArgumentException("ERROR: Fila no v√°lida.");
 		}else {
 			this.fila = fila;
 		}	
@@ -15,8 +22,8 @@ public class Posicion {
 		return this.fila;
 	}
 	public void setColumna(char columna) {
-		if (columna < 'a' && columna > 'h' || columna < 'A' && columna > 'H') {
-			throw new IllegalArgumentException("La columna introducida no es v·lida, porfavor utilice otra entre A y H");
+		if (columna < 'a' | columna > 'h' ) {
+			throw new IllegalArgumentException("ERROR: Columna no v√°lida.");
 		}else {
 			this.columna = columna;
 		}
