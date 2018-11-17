@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class PosicionTest {
-/**/
+/*
 	@Test
 	public void constructorValidoTest() {
 		Posicion posicion;
@@ -108,6 +108,5 @@ public class PosicionTest {
 	public void toStringTest() {
 		Posicion posicion = new Posicion(1, 'a');
 		assertEquals("[fila=1, columna=a]", posicion.toString());
-	}
-
+	*/
 }
