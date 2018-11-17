@@ -47,7 +47,7 @@ public class PosicionTest {
 			assertEquals(posicion, nuevaPosicion);
 		}
 	}
-	/*
+
 	@Test
 	public void setFilaNoValidaTest() {
 		Posicion posicion = new Posicion(1, 'a');
@@ -108,6 +108,6 @@ public class PosicionTest {
 	public void toStringTest() {
 		Posicion posicion = new Posicion(1, 'a');
 		assertEquals("[fila=1, columna=a]", posicion.toString());
-	}*/
+	}
 
 }
