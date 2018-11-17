@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class PosicionTest {
-/*
+/**/
 	@Test
 	public void constructorValidoTest() {
 		Posicion posicion;
@@ -33,7 +33,7 @@ public class PosicionTest {
 			assertNull(posicion);
 		}
 	}
-	*/
+	
 	@Test
 	public void constructorCopiaTest() {
 		Posicion posicion = new Posicion(1, 'a');

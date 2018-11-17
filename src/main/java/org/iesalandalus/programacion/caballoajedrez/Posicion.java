@@ -1,15 +1,18 @@
 package org.iesalandalus.programacion.caballoajedrez;
 
+import static org.junit.Assert.assertArrayEquals;
+
 public class Posicion {
 	private int fila;
 	private char columna;
 	public Posicion(int fila, char columna) {
 		setFila(fila);
 		setColumna(columna);
+	
 	}
 	public Posicion(Posicion posicion) {
-		this.fila=getFila();
-		this.columna=getColumna();
+		posicion.fila=this.getFila();
+		posicion.columna=this.getColumna();		
 	}
 	public void setFila(int fila) {
 		if (fila < 1 | fila > 8 ) {
@@ -31,4 +34,28 @@ public class Posicion {
 	public char getColumna() {
 		return this.columna;
 	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + columna;
+		result = prime * result + fila;
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Posicion other = (Posicion) obj;
+		if (columna != other.columna)
+			return false;
+		if (fila != other.fila)
+			return false;
+		return true;
+	}
+	
 }
