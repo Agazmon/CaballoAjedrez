@@ -68,10 +68,9 @@ public class Caballo {
 		switch (direccion) {
 			case ARRIBA_IZQUIERDA:
 				try {
-					if (this.color.equals(Color.BLANCO)) {
 						this.posicion = new Posicion(posicion.getFila()+2, (char)(posicion.getColumna()-1));
-					} else if (this.color.equals(Color.NEGRO)) {
-						this.posicion = new Posicion(posicion.getFila()-2, (char)(posicion.getColumna()+1));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
 					}
 				} catch (IllegalArgumentException e) {
 					this.posicion = new Posicion(posicion.getFila(), posicion.getColumna());
@@ -79,10 +78,9 @@ public class Caballo {
 				}
 			case ARRIBA_DERECHA:
 				try {
-					if (this.color.equals(Color.BLANCO)) {
 						this.posicion = new Posicion(posicion.getFila()+2, (char)(posicion.getColumna()+1));
-					} else if (this.color.equals(Color.NEGRO)) {
-						this.posicion = new Posicion(posicion.getFila()-2, (char)(posicion.getColumna()-1));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
 					} else {
 						this.posicion = new Posicion(posicion.getFila(), posicion.getColumna());
 						throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
@@ -92,10 +90,9 @@ public class Caballo {
 				}
 			case DERECHA_ARRIBA:
 				try {
-					if (this.color.equals(Color.BLANCO)) {
 						this.posicion = new Posicion(posicion.getFila()+1, (char)(posicion.getColumna()+2));
-					} else if (this.color.equals(Color.NEGRO)) {
-						this.posicion = new Posicion(posicion.getFila()-1, (char)(posicion.getColumna()-2));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
 					} else {
 						this.posicion = new Posicion(posicion.getFila(), posicion.getColumna());
 						throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
@@ -105,10 +102,9 @@ public class Caballo {
 				}
 			case DERECHA_ABAJO:
 				try {
-					if (this.color.equals(Color.BLANCO)) {
 						this.posicion = new Posicion(posicion.getFila()-1, (char)(posicion.getColumna()+2));
-					} else if (this.color.equals(Color.NEGRO)) {
-						this.posicion = new Posicion(posicion.getFila()+1, (char)(posicion.getColumna()-2));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
 					} else {
 						this.posicion = new Posicion(posicion.getFila(), posicion.getColumna());
 						throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
@@ -118,10 +114,9 @@ public class Caballo {
 				}
 			case ABAJO_DERECHA:
 				try {
-					if (this.color.equals(Color.BLANCO)) {
 						this.posicion = new Posicion(posicion.getFila()-2, (char)(posicion.getColumna()+1));
-					} else if (this.color.equals(Color.NEGRO)) {
-						this.posicion = new Posicion(posicion.getFila()+2, (char)(posicion.getColumna()-1));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
 					} else {
 						this.posicion = new Posicion(posicion.getFila(), posicion.getColumna());
 						throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
@@ -131,10 +126,9 @@ public class Caballo {
 				}
 			case ABAJO_IZQUIERDA:
 				try {
-					if (this.color.equals(Color.BLANCO)) {
 						this.posicion = new Posicion(posicion.getFila()-2, (char)(posicion.getColumna()-1));
-					} else if (this.color.equals(Color.NEGRO)) {
-						this.posicion = new Posicion(posicion.getFila()+2, (char)(posicion.getColumna()+1));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
 					} else {
 						this.posicion = new Posicion(posicion.getFila(), posicion.getColumna());
 						throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
@@ -144,10 +138,9 @@ public class Caballo {
 				}
 			case IZQUIERDA_ARRIBA:
 				try {
-					if (this.color.equals(Color.BLANCO)) {
 						this.posicion = new Posicion(posicion.getFila()+1, (char)(posicion.getColumna()-2));
-					} else if (this.color.equals(Color.NEGRO)) {
-						this.posicion = new Posicion(posicion.getFila()-1, (char)(posicion.getColumna()+2));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
 					}
 				} catch (IllegalArgumentException e) {
 					this.posicion = new Posicion(posicion.getFila(), posicion.getColumna());
@@ -155,10 +148,10 @@ public class Caballo {
 				}
 			case IZQUIERDA_ABAJO:
 				try {
-					if (this.color.equals(Color.BLANCO)) {
 						this.posicion = new Posicion(posicion.getFila()-1, (char)(posicion.getColumna()-2));
-					} else if (this.color.equals(Color.NEGRO)) {
-						this.posicion = new Posicion(posicion.getFila()+1, (char)(posicion.getColumna()+2));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
+
 					} else {
 						throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
 					}
@@ -170,3 +163,53 @@ public class Caballo {
 		}
 	}
 }
+/* 	} else if (this.color.equals(Color.NEGRO)) {
+						this.posicion = new Posicion(posicion.getFila()-2, (char)(posicion.getColumna()+1));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
+						}
+   } else if (this.color.equals(Color.NEGRO)) {
+ 
+						this.posicion = new Posicion(posicion.getFila()-2, (char)(posicion.getColumna()-1));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
+						}
+  } else if (this.color.equals(Color.NEGRO)) {
+ 
+						this.posicion = new Posicion(posicion.getFila()-1, (char)(posicion.getColumna()-2));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
+						}
+   } else if (this.color.equals(Color.NEGRO)) {
+ 
+						this.posicion = new Posicion(posicion.getFila()+1, (char)(posicion.getColumna()-2));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
+						}
+  
+  
+  
+  
+  } else if (this.color.equals(Color.NEGRO)) {
+
+						this.posicion = new Posicion(posicion.getFila()+2, (char)(posicion.getColumna()-1));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
+						}
+ } else if (this.color.equals(Color.NEGRO)) {
+
+						this.posicion = new Posicion(posicion.getFila()+2, (char)(posicion.getColumna()+1));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
+						}
+  	} else if (this.color.equals(Color.NEGRO)) {
+						this.posicion = new Posicion(posicion.getFila()-1, (char)(posicion.getColumna()+2));
+						if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+							throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
+						}					
+  } else if (this.color.equals(Color.NEGRO)) {
+  		this.posicion = new Posicion(posicion.getFila()+1, (char)(posicion.getColumna()+2));
+		if ((posicion.getFila()<1|posicion.getColumna()<'a')|(posicion.getFila()>8|posicion.getColumna()>'g')) {
+			throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
+						} 
+*/
