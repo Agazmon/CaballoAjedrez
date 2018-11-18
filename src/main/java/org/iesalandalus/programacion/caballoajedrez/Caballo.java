@@ -15,7 +15,7 @@ public class Caballo {
 	}
 
 	public Caballo(Color color) {
-		this.color = color;
+		setColor(color);
 		if (this.color == null) {
 			throw new IllegalArgumentException("ERROR: No se puede asignar un color nulo.");
 		} else {
@@ -30,7 +30,7 @@ public class Caballo {
 	}
 
 	public Caballo(Color color, char columna) {
-		this.color = color;
+		setColor(color);
 		if (this.color == null) {
 			throw new IllegalArgumentException("ERROR: No se puede asignar un color nulo.");
 		} else {
