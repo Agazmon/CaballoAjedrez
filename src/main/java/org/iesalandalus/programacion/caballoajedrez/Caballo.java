@@ -203,6 +203,11 @@ public class Caballo {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "Caballo [posición=" + posicion + ", color=" + color + "]";
+	}
+	
 }
 /*
  * } else if (this.color.equals(Color.NEGRO)) { this.posicion = new
