@@ -3,38 +3,45 @@ package org.iesalandalus.programacion.caballoajedrez;
 public class Posicion {
 	private int fila;
 	private char columna;
+
 	public Posicion(int fila, char columna) {
 		setFila(fila);
 		setColumna(columna);
-	
+
 	}
+
 	public Posicion(Posicion posicion) {
 		if (posicion == null) {
 			throw new NullPointerException("ERROR: No es posible copiar una posición nula.");
 		}
-		posicion.fila=this.getFila();
-		posicion.columna=this.getColumna();		
+		posicion.fila = this.getFila();
+		posicion.columna = this.getColumna();
 	}
+
 	public void setFila(int fila) {
-		if (fila < 1 | fila > 8 ) {
+		if (fila < 1 | fila > 8) {
 			throw new IllegalArgumentException("ERROR: Fila no válida.");
-		}else {
+		} else {
 			this.fila = fila;
-		}	
+		}
 	}
+
 	public int getFila() {
 		return this.fila;
 	}
+
 	public void setColumna(char columna) {
-		if (columna < 'a' | columna > 'h' ) {
+		if (columna < 'a' | columna > 'h') {
 			throw new IllegalArgumentException("ERROR: Columna no válida.");
-		}else {
+		} else {
 			this.columna = columna;
 		}
 	}
+
 	public char getColumna() {
 		return this.columna;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -43,6 +50,7 @@ public class Posicion {
 		result = prime * result + fila;
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -58,9 +66,10 @@ public class Posicion {
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "[fila=" + fila + ", columna=" + columna + "]";
 	}
-	
+
 }

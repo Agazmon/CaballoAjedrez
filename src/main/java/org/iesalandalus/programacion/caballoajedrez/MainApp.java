@@ -16,10 +16,10 @@ public class MainApp {
 	}
 
 	private static void mostrarMenu() {
-		System.out.println("1:");
-		System.out.println("2:");
-		System.out.println("3:");
-		System.out.println("4:");
+		System.out.println("1: Crear caballo por defecto");
+		System.out.println("2: Crear un caballo indicando un color");
+		System.out.println("3: Crear un caballo indicando un color y una columna");
+		System.out.println("4: Mover un caballo existente");
 		System.out.println("5: Salir");
 	}
 
@@ -96,9 +96,10 @@ public class MainApp {
 	private static void moverCaballo() {
 		Direccion direccion;
 		mostrarMenuDirecciones();
-		direccion=elegirDireccion();
+		direccion = elegirDireccion();
 		Caballo.mover(direccion);
 	}
+
 	private static void mostrarMenuDirecciones() {
 		System.out.println("ARRIBA_IZQUIERDA");
 		System.out.println("ARRIBA_DERECHA");
@@ -109,6 +110,7 @@ public class MainApp {
 		System.out.println("IZQUIERDA_ARRIBA");
 		System.out.println("IZQUIERDA_ABAJO");
 	}
+
 	private static Direccion elegirDireccion() {
 		String cadenaDireccion;
 		Direccion direccion;
@@ -132,6 +134,6 @@ public class MainApp {
 		} else {
 			direccion = null;
 		}
-			return direccion;
+		return direccion;
 	}
 }
