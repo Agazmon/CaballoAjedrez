@@ -42,6 +42,7 @@ public class MainApp {
 			System.out.println("Se ha creado un caballo con el color indicado");
 		case 3:
 			crearCaballoColorPosicion();
+			System.out.println("Se ha creado un caballo con el color en la columna indicada");
 		case 4:
 			moverCaballo();
 			System.out.println("Movido el caballo");
