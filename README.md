@@ -46,3 +46,7 @@ Para ello te pongo un diagrama de clases para el mismo y poco a poco te iré exp
 ## Alumno: Alejandro Jesús Gázquez Monedero
 Tras la finalización del curso decidí por mi cuenta implementar el MVC sobre este programa, ademas de implementar herencia, interfaces, almacenamiento en EDD, interfaz textual e interfaz gráfica.
 - Cambiado el nombre del repositorio
+- Adaptados los paquetes al MVC, borrados los test de la anterior implementación, creada la nueva Branch sobre la que se va a trabajar, y añadido un primer diagrama de clases *todavia en proceso de mejora*.
+
+
+![Diagrama de clases para Ajedrez](resources/diagramaCaballo.png)
