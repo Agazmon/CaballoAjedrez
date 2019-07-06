@@ -40,3 +40,9 @@ Para ello te pongo un diagrama de clases para el mismo y poco a poco te iré exp
 - El programa debe pasar todas las pruebas que van en el esqueleto del proyecto y toda entrada del programa será validada, para evitar que el programa termine abruptamente debido a una excepción.
 
 - Se valorará la corrección ortográfica tanto en los comentarios como en los mensajes que se muestren al usuario.
+
+
+# Extra:Ajedrez
+## Alumno: Alejandro Jesús Gázquez Monedero
+Tras la finalización del curso decidí por mi cuenta implementar el MVC sobre este programa, ademas de implementar herencia, interfaces, almacenamiento en EDD, interfaz textual e interfaz gráfica.
+- Cambiado el nombre del repositorio
